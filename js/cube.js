@@ -40,7 +40,7 @@
         var objImg = new Image();
         if (!objImg.loaded)
             for (var i = 0; i < arr.length; i++) {
-                objImg.src = "img/" + arr[i];
+                objImg.src = "./img/" + arr[i];
                 objImg.index = i + 1;
                 objImg.onload = function () {
                     processBar.style.width = this.index / arr.length * 100 + "%";
