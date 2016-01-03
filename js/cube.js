@@ -51,7 +51,7 @@
                 }
             }
         processBar.addEventListener('transitionend', function () {
-            this.parentNode.parentNode.remove();
+            this.parentNode.parentNode.removeChild();
             //bell.play();
         }, false)
     }
@@ -70,7 +70,7 @@
         say.pause();
         phoneId.style.transform = 'translate(0,' + desH + 'px)';
         phoneId.addEventListener('transitionend', function () {
-            this.remove();
+            this.removeChild();
             messageFn()
         }, false)
 
@@ -90,7 +90,7 @@
             if (index == messageLis.length - 1) {
                 window.clearInterval(timer);
                 window.setTimeout(function () {
-                    message.remove();
+                    message.removeChild();
                     music.pause();
                     cubeFn();
                 }, 2000)
